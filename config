@@ -1,0 +1,32 @@
+################################
+## SSH CONFIG FILE
+################################
+
+Host targaryen
+    HostName 192.168.1.10
+    User john
+    Port 7654
+    IdentityFile ~/.ssh/targaryen.key
+
+Host tyrell
+    HostName 192.168.10.20
+    Port 2222
+
+Host martell
+    HostName 192.168.10.50
+
+Host *ell
+    user oberyn
+    LogLevel INFO
+
+Host * !martell
+    LogLevel INFO
+
+Host *
+    User root
+    Compression yes
+
+Host stark
+    HostName 127.0.0.1
+    Port 6666
+    IdentityFile ~/.ssh/stark.key
